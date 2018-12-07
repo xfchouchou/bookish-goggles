@@ -1,8 +1,12 @@
 <template>
   <div id="app">
     <div id="nav" v-show="$route.path !== '/Login'">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <div class="header">
+        <div class="img"></div>
+        <!--<img src="assets/menu.png" >-->
+      </div>
+      <!--<router-link to="/Home">Home</router-link> |-->
+      <!--<router-link to="/about">About</router-link>-->
     </div>
     <router-view/>
   </div>
@@ -24,13 +28,19 @@
   color: #2c3e50;
 }
 #nav {
-  background-color: #313769;
+  background-color: #fff;
   padding: 30px;
   a {
     font-weight: bold;
     color: #2c3e50;
     &.router-link-exact-active {
       color: #42b983;
+    }
+  }
+  .header{
+    display: flex;
+    .img{
+
     }
   }
 }
